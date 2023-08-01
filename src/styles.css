@@ -1,0 +1,39 @@
+.css-container {
+  max-width: 100%;
+  width: 700px;
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  background: radial-gradient(
+    circle at 18.7% 37.8%,
+    rgb(250, 250, 250) 0%,
+    rgb(225, 234, 238) 90%
+  );
+  font-family: Poppins, sans-serif;
+  font-weight: lighter;
+}
+ul {
+  list-style: none;
+  margin: 70px 0 0;
+}
+.form-control {
+  margin: 0 0 15px;
+}
+
+.temperature {
+  margin: 10px 0 0;
+}
+
+h1 .degree {
+  font-size: small;
+  position: relative;
+}
+
+.city {
+  margin: 15px 0 0;
+}
+.temp-value {
+  display: inline;
+}
