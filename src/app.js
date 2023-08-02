@@ -36,9 +36,11 @@ function search(city) {
 
 function getInformation(response) {
   console.log(response.data);
-  document.querySelector("#temp-value").innerHTML = Math.round(
-    response.data.temperature.current
-  );
+
+  celsiusTemperature = response.data.temperature.current;
+  document.querySelector("#temp-value").innerHTML =
+    Math.round(celsiusTemperature);
+
   document.querySelector("#description").innerHTML =
     response.data.condition.description;
 
@@ -69,6 +71,26 @@ function currentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(currentPosition);
 }
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp-value");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp-value");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+let celsiusTemperature = null;
+
+let degreeFahrenheit = document.querySelector("#degreeFahrenheit");
+degreeFahrenheit.addEventListener("click", displayFahrenheitTemperature);
+
+let degreeCelsius = document.querySelector("#degreeCelsius");
+degreeCelsius.addEventListener("click", displayCelsiusTemperature);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", getCity);
