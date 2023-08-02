@@ -1,4 +1,5 @@
-function getDay(date) {
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let days = [
     "Sunday",
     "Monday",
@@ -18,11 +19,8 @@ function getDay(date) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let time = document.querySelector("#date");
-  time.innerHTML = `${day} ${hour}:${minutes}`;
+  return `${day} ${hour}:${minutes}`;
 }
-
-getDay(new Date());
 
 function getCity(event) {
   event.preventDefault();
@@ -56,6 +54,9 @@ function getInformation(response) {
   document.querySelector("#city").innerHTML = response.data.city;
 
   iconElement.setAttribute("src", response.data.condition.icon_url);
+
+  let dateElement = document.querySelector("#date");
+  dateElement.innerHTML = formatDate(response.data.time * 1000);
 }
 function currentPosition(position) {
   let lat = position.coords.latitude;
