@@ -57,8 +57,22 @@ function getInformation(response) {
 
   iconElement.setAttribute("src", response.data.condition.icon_url);
 }
+function currentPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "ea34ad36f9tbf5ceb9037o7457b5a408";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}`;
+  axios.get(apiUrl).then(getInformation);
+}
+function currentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(currentPosition);
+}
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", getCity);
+
+let currentLocationButton = document.querySelector("#currentLocation");
+currentLocationButton.addEventListener("click", currentLocation);
 
 search("New York");
