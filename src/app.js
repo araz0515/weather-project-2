@@ -18,8 +18,17 @@ function formatDate(timestamp) {
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
+
+    if (hour >= 20 || hour <= 6) {
+      makeItDark();
+    }
   }
+
   return `${day} ${hour}:${minutes}`;
+}
+function makeItDark() {
+  let body = document.querySelector("body");
+  body.classList.add("dark");
 }
 
 function getCity(event) {
