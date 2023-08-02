@@ -54,6 +54,8 @@ function getInformation(response) {
   document.querySelector("#feelsLike").innerHTML = `${feels}˚C`;
 
   document.querySelector("#city").innerHTML = response.data.city;
+
+  iconElement.setAttribute("src", response.data.condition.icon_url);
 }
 
 let searchForm = document.querySelector("#search-form");
