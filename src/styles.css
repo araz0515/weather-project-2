@@ -2,6 +2,7 @@ body {
   background: url("../media/daytimeSky.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: Poppins, sans-serif;
 }
 .dark {
   color: black;
@@ -13,9 +14,9 @@ body {
   max-width: 100%;
   width: 800px;
   display: block;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 20px;
-  margin: 40px auto;
+  margin: 80px auto 0;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.4);
   font-family: Poppins, sans-serif;
@@ -44,7 +45,7 @@ ul {
 }
 
 .degree {
-  font-size: small;
+  font-size: 15px;
   position: relative;
   top: -18px;
 }
@@ -73,4 +74,38 @@ ul {
 }
 .btn:hover {
   background: #38598b;
+}
+
+.dark .btn {
+  border: 1px solid black;
+  color: black;
+}
+
+.dark .btn:hover {
+  background: #222831;
+  color: white;
+}
+
+.dark .degreeFahrenheit,
+.dark .degreeCelsius {
+  color: #27296d;
+}
+
+footer {
+  text-align: center;
+  font-weight: lighter;
+  margin: 0;
+  font-style: italic;
+}
+.dark footer {
+  color: white;
+}
+.footer-link {
+  text-decoration: none;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+.dark .footer-link {
+  color: #007cb9;
 }
