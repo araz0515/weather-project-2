@@ -77,12 +77,18 @@ function displayFahrenheitTemperature(event) {
   let temperatureElement = document.querySelector("#temp-value");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+
+  degreeCelsius.classList.remove("active");
+  degreeFahrenheit.classList.add("active");
 }
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp-value");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+  degreeFahrenheit.classList.add("active");
+  degreeCelsius.classList.remove("active");
 }
 let celsiusTemperature = null;
 

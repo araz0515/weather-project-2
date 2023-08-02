@@ -1,3 +1,9 @@
+body {
+  background: url("media/daytimeSky.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .css-container {
   max-width: 100%;
   width: 800px;
@@ -42,4 +48,25 @@ ul {
 
 .description {
   text-transform: capitalize;
+}
+
+.active {
+  text-decoration: none;
+  color: black;
+}
+.degreeFahrenheit,
+.degreeCelsius {
+  text-decoration: none;
+  transition: all 200ms ease-in-out;
+}
+.degreeFahrenheit:hover,
+.degreeCelsius:hover {
+  text-decoration: underline;
+}
+.btn {
+  color: #38598b;
+  border: 1px solid #38598b;
+}
+.btn:hover {
+  background: #38598b;
 }
