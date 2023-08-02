@@ -16,7 +16,7 @@
   <body>
     <div class="container">
       <div class="css-container">
-        <form>
+        <form id="search-form">
           <div class="row">
             <div class="col-10">
               <input
@@ -24,6 +24,7 @@
                 placeholder="Search City..."
                 autofocus="off"
                 class="form-control"
+                id="search-input"
               />
             </div>
             <div class="col">
@@ -31,10 +32,10 @@
             </div>
           </div>
         </form>
-        Last updated: August 1, 2023
+        Last updated: <span id="date"></span>
         <div class="row">
           <div class="col">
-            <h1 class="city" id="city">New York</h1>
+            <h1 class="city" id="city"></h1>
             <div class="clearfix">
               <img
                 src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
@@ -43,17 +44,17 @@
               
               />
               <div class="temperature float-start" id="temperature" >
-                <h1 class="temp-value">25</h1>
-                <span class="degree">˚C | ˚F</span>
-                <div id="description">Description</span>
+                <h1 class="temp-value" id="temp-value"></h1>
+                <span class="degree"> <a href="" id="degreeCelsius">˚C</a> | <a href="" class="degreeFahrenheit">˚F</a></span>
+                <div class="description" id="description"></span>
               </div>
             </div>
           </div></div>
           <div class="col">
             <ul>
-              <li>Humidity</li>
-              <li>Wind</li>
-              <li>Feels Like</li>
+              <li>Humidity: <span id="humidity"></span></li>
+              <li>Wind: <span id="wind"></span></li>
+              <li>Feels Like: <span id="feelsLike"></span></li>
             </ul>
           </div>
         </div>

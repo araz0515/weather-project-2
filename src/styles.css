@@ -33,7 +33,17 @@ h1 .degree {
 
 .city {
   margin: 15px 0 0;
+  text-transform: capitalize;
 }
 .temp-value {
   display: inline;
+}
+
+.degree {
+  position: relative;
+  top: -18px;
+}
+
+.description {
+  text-transform: capitalize;
 }
