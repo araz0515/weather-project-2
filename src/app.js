@@ -87,8 +87,8 @@ function displayCelsiusTemperature(event) {
   let temperatureElement = document.querySelector("#temp-value");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 
-  degreeFahrenheit.classList.add("active");
-  degreeCelsius.classList.remove("active");
+  degreeFahrenheit.classList.remove("active");
+  degreeCelsius.classList.add("active");
 }
 let celsiusTemperature = null;
 

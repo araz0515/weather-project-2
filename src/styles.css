@@ -1,5 +1,5 @@
 body {
-  background: url("media/daytimeSky.jpg");
+  background: url("../media/daytimeSky.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -12,14 +12,11 @@ body {
   padding: 20px;
   margin: 40px auto;
   border-radius: 10px;
-  background: radial-gradient(
-    circle at 18.7% 37.8%,
-    rgb(250, 250, 250) 0%,
-    rgb(225, 234, 238) 90%
-  );
+  background-color: rgba(255, 255, 255, 0.5);
   font-family: Poppins, sans-serif;
   font-weight: lighter;
 }
+
 ul {
   list-style: none;
   margin: 70px 0 0;
@@ -35,6 +32,7 @@ ul {
 .city {
   margin: 15px 0 0;
   text-transform: capitalize;
+  font-size: 35px;
 }
 .temp-value {
   display: inline;
@@ -52,6 +50,7 @@ ul {
 
 .active {
   text-decoration: none;
+  font-weight: 500;
   color: black;
 }
 .degreeFahrenheit,
