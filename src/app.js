@@ -133,9 +133,9 @@ function displayForecast(response) {
          alt="" class="forecast-image">
              <div class="forecast-degrees"><span class="forecast-high"><strong>${Math.round(
                forecastDay.temperature.maximum
-             )}</strong> </span><span class="forecast-low">${Math.round(
+             )}˚</strong> </span><span class="forecast-low">${Math.round(
           forecastDay.temperature.minimum
-        )}</span></div> 
+        )}˚</span></div> 
             </div>`;
     }
   });
