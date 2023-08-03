@@ -41,6 +41,11 @@ function search(city) {
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
   axios.get(apiUrl).then(getInformation);
 }
+function getForecast(city) {
+  let apiKey = "ea34ad36f9tbf5ceb9037o7457b5a408";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function getInformation(response) {
   console.log(response.data);
@@ -67,7 +72,10 @@ function getInformation(response) {
 
   let dateElement = document.querySelector("#date");
   dateElement.innerHTML = formatDate(response.data.time * 1000);
+
+  getForecast(response.data.city);
 }
+
 function currentPosition(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
@@ -99,7 +107,8 @@ function displayCelsiusTemperature(event) {
   degreeCelsius.classList.add("active");
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -118,7 +127,6 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
 
 let celsiusTemperature = null;
 
