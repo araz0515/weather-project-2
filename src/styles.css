@@ -38,16 +38,18 @@ ul {
 .city {
   margin: 15px 0 0;
   text-transform: capitalize;
-  font-size: 35px;
+  font-size: 25px;
+  opacity: 0.7;
 }
 .temp-value {
   display: inline;
+  font-size: 50px;
 }
 
 .degree {
   font-size: 15px;
   position: relative;
-  top: -18px;
+  top: -25px;
 }
 
 .description {
