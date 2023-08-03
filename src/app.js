@@ -98,6 +98,28 @@ function displayCelsiusTemperature(event) {
   degreeFahrenheit.classList.remove("active");
   degreeCelsius.classList.add("active");
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue"];
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col-2">
+              <div class="date">${day}</div>
+              <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png" alt="" class="forecast-image">
+             <div class="forecast-degrees"><span class="forecast-high"><strong>18</strong> </span><span class="forecast-low">12</span></div> 
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
+
 let celsiusTemperature = null;
 
 let degreeFahrenheit = document.querySelector("#degreeFahrenheit");

@@ -111,3 +111,24 @@ footer {
 .dark .footer-link {
   color: #007cb9;
 }
+
+.weather-forecast {
+  margin: 40px 0 0;
+}
+.date {
+  text-align: center;
+  line-height: 10px;
+  font-weight: 500;
+}
+
+.forecast-degrees {
+  text-align: center;
+  line-height: 10px;
+}
+
+.forecast-image {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 70px;
+}
