@@ -73,7 +73,7 @@ ul {
 .btn {
   color: #38598b;
   border: 1px solid #38598b;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 .btn:hover {
   background: #38598b;
